@@ -1,41 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/04 01:51:54 by alex              #+#    #+#             */
-/*   Updated: 2024/04/25 23:46:26 by columbux         ###   ########.fr       */
+/*   Created: 2024/04/25 23:27:48 by columbux          #+#    #+#             */
+/*   Updated: 2024/04/25 23:39:46 by columbux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_H
-# define PHILO_H
+#include "philo.h"
 
-# include <sys/time.h>
-# include <pthread.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-typedef struct s_philo_args
+void	ph_error(char *message)
 {
-	int		n_philos;
-	int		time_die;
-	int		time_eat;
-	int		time_sleep;
-	int		n_eat;
-}				t_args;
+	char	*red;
+	char	*white;
 
-typedef struct s_philo_stats
-{
-	int		id;
-	int		n_ate;
-	int		death;
-}				t_stas;
-
-// utils.c
-
-void	ph_error(char *message);
-
-#endif
+	red = "\033[0;91m";
+	white = "\033[0;97m";
+	printf("%sError: %s%s\n", red, message, white);
+	exit(EXIT_FAILURE);
+}
