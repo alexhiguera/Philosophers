@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/04 01:51:54 by alex              #+#    #+#             */
-/*   Updated: 2024/04/26 23:25:10 by columbux         ###   ########.fr       */
+/*   Created: 2024/04/04 01:51:54 by ahiguera          #+#    #+#             */
+/*   Updated: 2024/04/27 00:56:47 by columbux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,33 @@
 # include <stdlib.h>
 # include <stdio.h>
 
+# define STD_ERROR 1
+
 typedef struct s_philo_args
 {
-	int		n_philos;
+	int		num_philos;
 	int		time_die;
 	int		time_eat;
 	int		time_sleep;
-	int		n_eat;
+	int		num_eats;
 }				t_args;
 
-typedef struct s_philo_stats
+typedef struct s_stats
 {
 	int		id;
 	int		n_ate;
 	int		death;
 }				t_stas;
+
+typedef struct s_philos
+{
+	t_args	philos_args;
+	t_stas	stats;
+}				t_philosophers;
+
+//init
+
+int		ph_init_philos(t_philosophers *args, char **argv);
 
 // utils.c
 

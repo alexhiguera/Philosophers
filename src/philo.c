@@ -5,23 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 19:50:18 by columbux          #+#    #+#             */
-/*   Updated: 2024/04/25 23:45:41 by columbux         ###   ########.fr       */
+/*   Created: 2024/04/25 19:50:18 by ahiguera          #+#    #+#             */
+/*   Updated: 2024/04/27 00:56:31 by columbux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	*philosophers(void *data)
+/* void	*philosophers(void *data)
 {
 	//TODO:threads
-}
+} */
 
 int	main(int argc, char **argv)
 {
+	t_philosophers	args;
+
 	if (argc == 6)
 	{
-	//TODO
+		ph_init_philos(&args, argv);
 	}
 	else
 		ph_error("5 arguments required\n ./philo <num_philos> <time_to_die> \
