@@ -6,7 +6,7 @@
 /*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 23:27:48 by columbux          #+#    #+#             */
-/*   Updated: 2024/04/26 01:01:11 by columbux         ###   ########.fr       */
+/*   Updated: 2024/04/26 23:24:59 by columbux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ph_error(char *message)
 	exit(EXIT_FAILURE);
 }
 
-int	ft_atoi(char *str)
+int	ph_atoi(char *str)
 {
 	int	result;
 	int	sign;

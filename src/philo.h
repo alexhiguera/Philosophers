@@ -6,7 +6,7 @@
 /*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 01:51:54 by alex              #+#    #+#             */
-/*   Updated: 2024/04/26 01:01:27 by columbux         ###   ########.fr       */
+/*   Updated: 2024/04/26 23:25:10 by columbux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ typedef struct s_philo_stats
 // utils.c
 
 void	ph_error(char *message);
-int		ft_atoi(char *str);
+int		ph_atoi(char *str);
 
 #endif
