@@ -6,7 +6,7 @@
 /*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 01:51:54 by ahiguera          #+#    #+#             */
-/*   Updated: 2024/04/27 00:56:47 by columbux         ###   ########.fr       */
+/*   Updated: 2024/04/29 00:43:11 by columbux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,12 @@ typedef struct s_philos
 
 //init
 
-int		ph_init_philos(t_philosophers *args, char **argv);
+int			ph_init_philos(t_philosophers *args, char **argv);
 
 // utils.c
 
-void	ph_error(char *message);
-int		ph_atoi(char *str);
+void		ph_error(char *message);
+int			ph_atoi(char *str);
+long long	timestamp(void);
 
 #endif

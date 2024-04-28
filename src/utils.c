@@ -6,7 +6,7 @@
 /*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 23:27:48 by columbux          #+#    #+#             */
-/*   Updated: 2024/04/26 23:24:59 by columbux         ###   ########.fr       */
+/*   Updated: 2024/04/29 00:41:44 by columbux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,14 @@ int	ph_atoi(char *str)
 		i++;
 	}
 	return (sign * result);
+}
+
+/* returns the current time in milliseconds */
+
+long long	timestamp(void)
+{
+	struct timeval	time;
+
+	gettimeofday(&time, NULL);
+	return ((time.tv_sec * 1000) + (time.tv_usec / 1000));
 }
